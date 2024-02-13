@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Repositioning</title>
+  <style>
+    #repositionButton {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<button id="repositionButton" onclick="repositionButton()">Reposition Button</button>
+
+<script>
+  function repositionButton() {
+    // Get the button element
+    var button = document.getElementById('repositionButton');
+
+    // Generate random coordinates for the button's new position
+    var newTop = Math.floor(Math.random() * window.innerHeight);
+    var newLeft = Math.floor(Math.random() * window.innerWidth);
+
+    // Update the button's position
+    button.style.top = newTop + 'px';
+    button.style.left = newLeft + 'px';
+  }
+</script>
+
+</body>
+</html>
